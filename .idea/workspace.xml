@@ -4,33 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97e22804-ac3c-44b1-a46d-280ad5cb9883" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eergun/databases/KulupDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eergun/databases/MusabakaDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eergun/entities/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eergun/entities/Insan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eergun/entities/Kulup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eergun/utilities/DatabaseManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eergun/utilities/GeneratorRex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eergun/utilities/ICRUD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eergun/utilities/enums/EHavaDurumu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eergun/utilities/enums/EKokart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eergun/utilities/enums/EMevki.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eergun/utilities/enums/EUyruk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eergun/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eergun/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eergun/entities/Antrenor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eergun/entities/Futbolcu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eergun/entities/Futbolcu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eergun/entities/Hakem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eergun/entities/Hakem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eergun/entities/Istatistik.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eergun/entities/Lig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eergun/entities/Lig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eergun/entities/Musabaka.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eergun/entities/Musabaka.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eergun/entities/Sezon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eergun/entities/Stadyum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eergun/entities/Stadyum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eergun/entities/Takim.java" beforeDir="false" />
-    </list>
+    <list default="true" id="97e22804-ac3c-44b1-a46d-280ad5cb9883" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +43,7 @@
     "Gradle.SoccerAppByJavaTeam [:Main.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/123as/Desktop/abc/SoccerAppByJavaTeam/src/main/java/com/eergun/entities/FutbolcuIstatistik.java",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
