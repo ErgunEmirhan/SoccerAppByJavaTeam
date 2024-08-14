@@ -5,6 +5,9 @@ import com.eergun.entities.*;
 import com.eergun.utilities.DatabaseManager;
 import com.eergun.utilities.GeneratorRex;
 
+import javax.sound.sampled.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Optional;
 import java.util.Scanner;
@@ -36,7 +39,7 @@ public class Main {
 	}
 	
 	private static void macOyna(Musabaka musabaka) throws InterruptedException{
-		String kulupAd1 = kulupler.findByID(musabaka.getKulup1Id()).get().getAd();
+		/*String kulupAd1 = kulupler.findByID(musabaka.getKulup1Id()).get().getAd();
 		String kulupAd2 = kulupler.findByID(musabaka.getKulup2Id()).get().getAd();
 		
 		Thread.sleep(3000);
@@ -54,6 +57,35 @@ public class Main {
 		Thread.sleep(4000);
 		System.out.println("SIMSEK GIBI!!! " + kulupAd1 + " enfes bir gol atıyor");
 		musabaka.setSkorTablosu(new Integer[]{3, 0});
+		System.out.println("macin sonucu: " + kulupAd1 + Arrays.toString(musabaka.getSkorTablosu()) + kulupAd2 +
+				                   "\nElinize " +
+				                   "saglik " +
+				                   "arkadaslar");*/
+		
+		playWavFile("src/main/resources/sounds/MacOnu.wav");
+		String kulupAd1 = kulupler.findByID(musabaka.getKulup1Id()).get().getAd();
+		String kulupAd2 = kulupler.findByID(musabaka.getKulup2Id()).get().getAd();
+		playWavFile("src/main/resources/sounds/MacBaslangicDudugu.wav");
+		Thread.sleep(1000);
+		System.out.println("Evet sevgili izleyenler, cekismeli bir mac ile karsinizdayiz!");
+		Thread.sleep(2000);
+		System.out.println( kulupAd1+ " den muthis bir hucum");
+		Thread.sleep(2000);
+		System.out.println("Eee, ııı, sey, yani, yüzde 1500");
+		Thread.sleep(2000);
+		System.out.println(kulupAd2 + " mort oldu");
+		Thread.sleep(2000);
+		System.out.println("TOP AGLARDA!!! " + kulupAd1 + " muthis bir gol atıyor");
+		playWavFile("src/main/resources/sounds/GoalEffect.wav");
+		Thread.sleep(2000);
+		System.out.println("VE GOOOOL!!! " + kulupAd1 + " efsane bir gol atıyor");
+		playWavFile("src/main/resources/sounds/GoalEffect.wav");
+		Thread.sleep(2000);
+		System.out.println("SIMSEK GIBI!!! " + kulupAd1 + " enfes bir gol atıyor");
+		playWavFile("src/main/resources/sounds/GoalEffect.wav");
+		playWavFile("src/main/resources/sounds/InanilmazBirMac.wav");
+		musabaka.setSkorTablosu(new Integer[]{3, 0});
+		playWavFile("src/main/resources/sounds/MacBitisDudugu.wav");
 		System.out.println("macin sonucu: " + kulupAd1 + Arrays.toString(musabaka.getSkorTablosu()) + kulupAd2 +
 				                   "\nElinize " +
 				                   "saglik " +
@@ -86,5 +118,34 @@ public class Main {
 		GeneratorRex.yaratVeKaydetFutbolcular(futbolcular);
 		GeneratorRex.kulupleriOlusturVeKaydet(kulupler);
 		GeneratorRex.stadyumlariOlusturVeKaydet(stadlar);
+	}
+	
+	private static void playWavFile(String filePath) {
+		try {
+			File soundFile = new File(filePath);
+			AudioInputStream audioStream = AudioSystem.getAudioInputStream(soundFile);
+			AudioFormat format = audioStream.getFormat();
+			DataLine.Info info = new DataLine.Info(Clip.class, format);
+			Clip audioClip = (Clip) AudioSystem.getLine(info);
+			audioClip.open(audioStream);
+			audioClip.start();
+			
+			audioClip.addLineListener(event -> {
+				if (event.getType() == LineEvent.Type.STOP) {
+					audioClip.close();
+				}
+			});
+			
+			// Klip çalınırken programın kapanmaması için bekleme ekledim
+			while (!audioClip.isRunning()) {
+				Thread.sleep(10);
+			}
+			while (audioClip.isRunning()) {
+				Thread.sleep(10);
+			}
+			
+		} catch (UnsupportedAudioFileException | IOException | LineUnavailableException | InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 }
